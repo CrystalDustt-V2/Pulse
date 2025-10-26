@@ -2,7 +2,7 @@ import dotenv from 'dotenv'
 import jwt from 'jsonwebtoken'
 
 dotenv.config()
-const JWT_SECRET = process.env.JWT_SECRET || 'devsecret'
+const JWT_SECRET = process.env.JWT_SECRET
 
 export default function auth(req, res, next) {
   const token = req.cookies?.token || (req.headers.authorization && req.headers.authorization.split(' ')[1])
