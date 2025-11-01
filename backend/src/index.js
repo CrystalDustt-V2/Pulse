@@ -5,7 +5,7 @@ import dotenv from 'dotenv'
 import express from 'express'
 import jwt from 'jsonwebtoken'
 import path from 'path'
-// import { Server as IOServer } from 'socket.io' // Commented out for Genezio serverless
+import { Server as IOServer } from 'socket.io'
 import { addXp } from './controllers/authController.js'
 import prisma from './prismaClient.js'
 import authRoutes from './routes/auth.js'
