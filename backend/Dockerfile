@@ -6,6 +6,7 @@ WORKDIR /app
 
 # Copy package files and install dependencies
 COPY package*.json ./
+RUN apk add --no-cache openssl
 RUN npm install
 
 # Copy remaining project files
